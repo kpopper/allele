@@ -6,7 +6,7 @@ A Ruby on Rails app template for even rapid-er prototyping. Based on Made By Man
 
 To create a fresh app from the Allele template with a remote environment on Heroku, simply run:
 
-`rails new app_name -d mysql -m https://raw.github.com/sidekickstudios/allele/master/allele.rb`
+`rails new app_name -d postgresql -m https://raw.github.com/sidekickstudios/allele/master/allele.rb`
 
 ## What's included
 
