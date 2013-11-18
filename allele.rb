@@ -1,6 +1,3 @@
-# set up the databases
-rake "db:create:all"
-
 #  Gems
 gem 'pg'
 gem 'strong_parameters'
@@ -35,6 +32,12 @@ gem_group :development, :test do
   gem 'pry-remote'
 end
 
+run "bundle install --path .bundle/gems"
+
+# set up the databases
+gsub_file 'config/database.yml', /username: .*$/, 'username:'
+run "bundle exec rake db:create:all"
+
 # Routes
 route "root to: 'home#index'"
 
@@ -56,6 +59,7 @@ get 'https://raw.github.com/sidekickstudios/allele/master/templates/favicon.ico'
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/READ.md', "README.md"
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/assets/javascripts/application.js', "app/assets/javascripts/application.js"
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/assets/stylesheets/application.css.scss', "app/assets/stylesheets/application.css.scss"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/assets/stylesheets/mxm-layout.css', "app/assets/stylesheets/mxm-layout.css"
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/views/layouts/application.html.erb', "app/views/layouts/application.html.erb"
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/config/initializers/carrierwave.rb', "config/initializers/carrierwave.rb"
 get 'https://raw.github.com/sidekickstudios/allele/master/templates/lib/generators/allele_admin_generator.rb', "lib/generators/allele_admin_generator.rb"
@@ -111,7 +115,7 @@ git :add => "."
 git :commit => "-a -m 'New application from Allele template'"
 
 # Final migration
-rake ("db:migrate")
+run ("bundle exec rake db:migrate")
 
 # Interactive configure
 say "\nTime to configure your new app...\n\n"
