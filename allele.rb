@@ -49,13 +49,13 @@ run "rm app/assets/stylesheets/application.css"
 run "rm app/views/layouts/application.html.erb"
 create_file 'app/views/home/index.html.erb'
 
-get 'https://raw.github.com/madebymany/allele/master/templates/favicon.ico', "public/favicon.ico"
-get 'https://raw.github.com/madebymany/allele/master/templates/READ.md', "README.md"
-get 'https://raw.github.com/madebymany/allele/master/templates/app/assets/javascripts/application.js', "app/assets/javascripts/application.js"
-get 'https://raw.github.com/madebymany/allele/master/templates/app/assets/stylesheets/application.css.scss', "app/assets/stylesheets/application.css.scss"
-get 'https://raw.github.com/madebymany/allele/master/templates/app/views/layouts/application.html.erb', "app/views/layouts/application.html.erb"
-get 'https://raw.github.com/madebymany/allele/master/templates/config/initializers/carrierwave.rb', "config/initializers/carrierwave.rb"
-get 'https://raw.github.com/madebymany/allele/master/templates/lib/generators/allele_admin_generator.rb', "lib/generators/allele_admin_generator.rb"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/favicon.ico', "public/favicon.ico"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/READ.md', "README.md"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/assets/javascripts/application.js', "app/assets/javascripts/application.js"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/assets/stylesheets/application.css.scss', "app/assets/stylesheets/application.css.scss"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/app/views/layouts/application.html.erb', "app/views/layouts/application.html.erb"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/config/initializers/carrierwave.rb', "config/initializers/carrierwave.rb"
+get 'https://raw.github.com/sidekickstudios/allele/master/templates/lib/generators/allele_admin_generator.rb', "lib/generators/allele_admin_generator.rb"
 
 create_file 'app/controllers/home_controller.rb' do <<-'FILE'
 class HomeController < ApplicationController
@@ -66,7 +66,7 @@ FILE
 end
 
 create_file 'app/mailers/mail_preview.rb' do <<-'FILE'
-if Rails.env.development? 
+if Rails.env.development?
   class MailPreview < MailView
     def example
       Mailer.mail().deliver

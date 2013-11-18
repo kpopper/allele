@@ -1,12 +1,12 @@
 # Allele
 
-A Ruby on Rails app template for even rapid-er prototyping.
+A Ruby on Rails app template for even rapid-er prototyping. Based on Made By Many's generously open-sourced template.
 
 ## Get started
 
 To create a fresh app from the Allele template with a remote environment on Heroku, simply run:
 
-`rails new app_name -d mysql -m https://raw.github.com/madebymany/allele/master/allele.rb`
+`rails new app_name -d mysql -m https://raw.github.com/sidekickstudios/allele/master/allele.rb`
 
 ## What's included
 
@@ -36,4 +36,9 @@ Check out the Wiki for some more quick 'n' dirty functionality.
 While Rails 4 is now a stable release, many of the gems we rely on are not, roadmap:
 
 - Move to Rails 4 once ActiveAdmin and SimpleForm cut reliable releases
-- ...then write a Sir-Trevor V3 generator
+
+## To Do
+
+* Replace mxm-layout.css with Sidekick appropriate one
+* Replace Bootstrap with Bourbon and Neat
+* Replace ActiveAdmin with RailsAdmin
