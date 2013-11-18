@@ -40,5 +40,4 @@ While Rails 4 is now a stable release, many of the gems we rely on are not, road
 ## To Do
 
 * Replace mxm-layout.css with Sidekick appropriate one
-* Replace Bootstrap with Bourbon and Neat
 * Replace ActiveAdmin with RailsAdmin
