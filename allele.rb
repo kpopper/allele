@@ -4,7 +4,10 @@ rake "db:create:all"
 #  Gems
 gem 'pg'
 gem 'strong_parameters'
-gem 'bootstrap-sass', '~> 2.3.1.3'
+gem 'sass'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'

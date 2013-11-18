@@ -11,7 +11,7 @@ To create a fresh app from the Allele template with a remote environment on Hero
 ## What's included
 
 - Authentication from [Devise](https://github.com/plataformatec/devise)
-- A front-end framework in the shape of [Bootstrap](http://twitter.github.io/bootstrap/)
+- A front-end framework in the shape of [Bourbon](http://bourbon.io/) with [Bitters](http://bitters.bourbon.io/) and [Neat](http://neat.bourbon.io/)
 - Image uploads with [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) and file storage on S3 via [Fog](https://github.com/fog/fog)
 - Save time on basic CRUD methods with [Inherited Resources](https://github.com/josevalim/inherited_resources)
 - Neat and easy to code forms with [Simple Form](https://github.com/plataformatec/simple_form)
